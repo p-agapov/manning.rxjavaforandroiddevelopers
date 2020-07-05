@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion setup.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.agapovp.android.manning.rxjavaforandroiddevelopers.chapter1.livesearch"
+        minSdkVersion setup.minSdkVersion
+        targetSdkVersion setup.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:${versions.coreKtxVersion}"
+    implementation "androidx.appcompat:appcompat:${versions.appcompatVersion}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayoutVersion}"
+
+    implementation "io.reactivex.rxjava3:rxkotlin:${versions.rxkotlinVersion}"
+    implementation "io.reactivex.rxjava3:rxandroid:${versions.rxandroidVersion}"
+    implementation "com.jakewharton.rxbinding4:rxbinding:${versions.rxbindingVersion}"
+
+    testImplementation "junit:junit:${versions.junitVersion}"
+
+    androidTestImplementation "androidx.test.ext:junit:${versions.androidxJunitVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${versions.espressoCoreVersion}"
+
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${versions.coreLibraryDesugaringVersion}"
+}
