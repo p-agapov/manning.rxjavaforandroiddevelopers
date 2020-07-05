@@ -1,2 +1,3 @@
 include ':chapter1-livesearch'
+include ':chapter1-coffeebreak'
 rootProject.name = "RxJava for Android Developers"
