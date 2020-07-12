@@ -49,7 +49,7 @@ ext {
 
             coreLibraryDesugaringVersion: "1.0.9",
 
-            rxJavaVersion               : "2.2.19",
-            rxAndroidVersion            : "2.1.1"
+            retrofitVersion             : "2.6.4",
+            gsonVersion                 : "2.8.6"
     ]
 }

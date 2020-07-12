@@ -12,8 +12,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/chapter1-livesearch" />
             <option value="$PROJECT_DIR$/chapter1-coffeebreak" />
+            <option value="$PROJECT_DIR$/chapter1-livesearch" />
+            <option value="$PROJECT_DIR$/chapter2-newsreader" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
